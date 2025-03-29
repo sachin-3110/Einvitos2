@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var tl = gsap.timeline()
 var tl2 = gsap.timeline()
+var tl3 = gsap.timeline()
 
 
 let mundanTxt = "Mundan, yaani pehli baar baal kaatna, ek bahut hi mahatvapurn Hindu sanskar hai jo chhoti umar ke bachchon ka sir mundvane ke roop me manaya jata hai. Yeh paramparaik vidhi Hindu dharm me shuddhi aur sanskari jeevan ki shuruaat ka pratik mana jata hai."
@@ -18,17 +19,44 @@ splitMundanTxt.forEach(element => {
 
 })
 
+
+// Gallery Text
+galleryText="Gallery"
+galtxt=document.getElementById("galleryText")
+splitGaltxt=galleryText.split("")
+splitGaltxt.forEach(elem=>{
+   span= document.createElement("span")
+   span.innerHTML=elem
+
+   galtxt.appendChild(span)
+})
+
+
+
+
+
+
+
 gsap.registerPlugin(ScrollTrigger) 
 
-gsap.from("#mundanDescp span", {
-    opacity: 0, y: 20, stagger: 0.3, duration: 1,scrollTrigger:(".mundaDescp",{
-        scrub:true
-
-    })
-});
 
 
-
+function textMundaAnimation(){
+    gsap.from("#mundanDescp span", {
+        opacity: 0, y: 20, stagger: 0.3, duration: 1,scrollTrigger:(".mundaDescp",{
+            scrub:true
+    
+        })
+    });
+    gsap.from("#mainContainer #starAnimation", {
+        rotate:360,
+        duration:2,
+        scrollTrigger:("main",{
+            scrub:true
+        })
+    });
+    
+}
 
 function LoaderProgressBar() {
     tl2.from("#kkm", {
@@ -64,22 +92,27 @@ function LoaderAnimation() {
         duration: 2,
         ease: Power2.easeOut,
         y: "-100%",
-        // onComplete(){
-        //     var main=document.getElementById("mainContainer")
-        //     main.style.display="flex";
-        // }  
+        onComplete(){
+            var main=document.getElementById("mainContainer")
+            main.style.display="flex";
+        }  
     }
 
 
     )
     tl.from("#mainContainer", {
         duration: 0.5,
-        opacity: 0,
+        opacity: 1,
+        onComplete(){
+            textMundaAnimation()
+        }
     })
-    //      var main=document.getElementById("mainContainer")
-    // main.style.display="flex";
+
+
 }
 
-// window.addEventListener("click", function () {
-//     LoaderAnimation()
-// });
+
+window.addEventListener("click", function () {
+    LoaderAnimation()
+
+});
