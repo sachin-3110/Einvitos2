@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundan Ceremony</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="">
+
+        <!-- <div class="w-2/3  z-20 absolute top-0 sm:top-10 right-0  text-white">
+            <div id="scrollOption"><i class="text-white text-5xl fa-solid fa-arrow-up-from-bracket"></i></div>
+            <div id="imagesCarouselAlbumTop" class="flex gap-1 p-1 justify-between items-center w-full">
+                <div id="image" class="shrink-0 flex justify-center items-center relative duration-250 group h-full ">
+                    <img src="https://i.postimg.cc/Kz8Xn1tZ/IMG-20250308-WA0105.jpg
+                    " class="sm:group-hover:-rotate-15 h-[20vh] duration-500 hover:scale-[2.5]" alt="">
+                </div>
+                <div id="image" class="shrink-0 flex justify-center items-center duration-250 group  h-full ">
+                    <img src="TestImg.jpeg" class="sm:group-hover:-rotate-15 h-[20vh] duration-500" alt="">
+                </div>
+                <div id="image" class="shrink-0 flex justify-center items-center duration-250 group h-full ">
+                    <img src="TestImg.jpeg" class="sm:group-hover:-rotate-15 h-[20vh] duration-500" alt="">
+                </div>
+                <div id="image" class="shrink-0 flex justify-center items-center duration-250 group  h-full ">
+                    <img src="TestImg.jpeg" class="sm:group-hover:-rotate-15 h-[20vh] duration-500" alt="">
+                </div>
+              
+            </div>
+
+        </div> -->
+        <header id="Loader"
+            class="none absolute md:w-full text-center headingText h-screen bg-[#a0430a] font-bold tracking-[2px] text-4xl md:text-6xl text-white py-10 sm:p-0 flex flex-col justify-center items-center">
+            <p class="text-2xl font-bold tracking-[5px]">Join us in celebrating this special occasion!</p>
+            <div
+                class="w-auto flex items-center justify-center shadow-[12px_12px_20px_5px_rgba(0,_0,_0,_0.1)] bg-orange-400 text-6xl sm:text-6xl rounded-xl">
+                <div id="kkm" class="p-10 w-auto flex md:flex-row flex-col justify-center items-center gap-2">
+                    <h1 class="sm:text-5xl md:text-8xl">Kartik</h1>
+                <h2 class="text-4xl">ka</h2>
+                <h1 class="sm:text-5xl md:text-8xl">Mundan</h1>
+                </div>
+            </div>
+            <div id="imgCOntainer" class="flex h-[20vh] md:h-screen items-center  justify-between w-full absolute">
+                <img class="h-full md:h-1/4 lg:h-1/3 relative -top-60 sm:-top-40" src="./Assets/Images/BabyWIthHair.png" alt="">
+                <img class="h-full md:h-1/4 lg:h-1/3 relative sm:top-45 top-50" src="./Assets/Images/BabyWithoutHair.png" alt="">
+            </div>
+            <div id="clickAnyWhere" class="text-sm md:text-xl relative -left-10 top-25 md:top-50 otherHeadings opacity-0">"...Click Any Where..."</div>
+            <div class="w-full md:w-[90%] absolute bottom-2 rounded-full h-6">
+                <div id="progress-bar" class="bg-amber-500 h-full rounded-full w-0">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="home">
+                <h2>Home</h2>
+                <p>Date: [Insert Date]</p>
+                <p>Location: [Insert Location]</p>
+            </section>
+            <section id="gallery">
+                <h2>Gallery</h2>
+                <p>Photos coming soon!</p>
+            </section>
+            <section id="rsvp">
+                <h2>RSVP</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="contact">Contact Information:</label>
+                    <input type="text" id="contact" name="contact" required>
+                    <label for="attendees">Number of Attendees:</label>
+                    <input type="number" id="attendees" name="attendees" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            <section id="schedule">
+                <h2>Schedule</h2>
+                <p>Details of the day's events will be updated soon.</p>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>For more information, please contact us at [Insert Contact Information].</p>
+            </section>
+        </main>
+    <footer>
+        <p>&copy; [Year] Mundan Ceremony. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
+        integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"
+        integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
