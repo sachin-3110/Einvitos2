@@ -18,3 +18,7 @@
 .otherHeadings{
     font-family: 'otherText', Courier, monospace;
 }
+.padding10{
+    padding:2rem;
+    margin:1rem;
+}
