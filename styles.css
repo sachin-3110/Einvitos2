@@ -12,6 +12,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100vw;
+    overflow-x:hidden ;
+}
 .headingText{
     font-family: 'Headings', Courier, monospace;
 }
@@ -22,7 +26,20 @@
     padding:2rem;
     margin:1rem;
 }
+.padding2{
+    padding-left:5rem;
+   
+}
+.padding5{
+    padding-left:5rem;
+    padding-right:5rem;
+   
+}
 #galleryText{
     padding-left:15px;
 }
+#marquee-container{
+    padding:5px;
+}
+
 

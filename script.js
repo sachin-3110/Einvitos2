@@ -112,6 +112,51 @@ function LoaderAnimation() {
 }
 
 
+// jab pin property ko use karenge tab hum humaesh trigger karenge parent ko 
+function textPinAnimation(){
+    var tlTextAni=gsap.timeline()
+    gsap.to("#parent1 h2",{
+        transform:"translateX(-80%)",
+        rotate:-20,
+        scrollTrigger:{
+            
+            trigger:"#parent1",
+            scroller:"body",
+            scrub:3,
+            pin:true,
+            pinSpacing:false,
+        }
+    })
+    gsap.to("#parent2 h2",{
+        transform:"translateX(-80%)",
+        rotate:20,
+        scrollTrigger:{
+            trigger:"#parent2",
+            scroller:"body",
+            scrub:3,
+            pin:true,
+            pinSpacing:false,
+        }
+    })
+    gsap.to("#parent3 h2",{
+        delay:0.5,
+        transform:"translateX(-90%)",
+        scrollTrigger:{
+            trigger:"#parent3",
+            scroller:"body",
+            scrub:3,
+            pin:true,
+           
+        }
+    })
+   
+
+
+}
+textPinAnimation()
+
+
+
 window.addEventListener("click", function () {
     LoaderAnimation()
 
