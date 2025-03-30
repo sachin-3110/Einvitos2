@@ -39,7 +39,15 @@ splitGaltxt.forEach(elem => {
 
 gsap.registerPlugin(ScrollTrigger)
 
+gsap.from("#Parents #textArea",{
+    delay:1,
+    duration:1,
+    opacity:0,
+    scrollTrigger:{
+        trigger:"#Parents"
+    }
 
+})
 
 function textMundaAnimation() {
     gsap.from("#mundanDescp span", {
