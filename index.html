@@ -40,6 +40,9 @@
          1.) loader mai se "none" hatana hai 
          2.) #mainContainer mai hidden likhna hai
          3.) Home section ko "none" se hatana hai
+         4.) Location section "none se hatan hai"
+         5.) Gallery section "none se hatan hai"
+
 
          
          -->
@@ -71,12 +74,14 @@
     <main id="mainContainer" class="flex-col relative overflow-x-hidden">
         <div id="starAnimation" class="text-[50vh] text-amber-200/20 fixed -top-40 left-0 otherHeadings">*</div>
         <div id="starAnimation" class="text-[50vh] text-amber-200/20 fixed -top-40 right-0 otherHeadings">*</div>
+        <!-- Home section -->
         <section id="home"
             class="none w-full flex justify-center items-center min-h-screen bg-[#a0430a] text-white otherHeadings">
             <div
                 class="padding10 w-[90%] overflow-hidden md:w-2/3 border-2  justify-center items-center text-center text-2xl">
                 <h2 class="text-3xl text-amber-200 mkhh"><span>Mundan</span> <span>Kya</span> <span>hota</span>
-                    <span>hai?</span></h2>
+                    <span>hai?</span>
+                </h2>
                 <div class="relative">
                     <p id="mundanDescp" class="">
                     </p>
@@ -85,9 +90,13 @@
             </div>
             <!-- <p>Location: [Insert Location]</p> -->
         </section>
-        <section id="gallery" class="h-screen bg-[#a0430a] flex flex-col justify-center items-center">
-            <h2 id="galleryText" class="otherHeadings text-7xl sm:text-8xl  text-amber-200 flex justify-center items-center"> </h2>
-            <div id="marquee-container" class="w-full flex-col md:w-[95%] flex gap-2 overflow-hidden border-2 border-white">
+
+        <!-- gallery section -->
+        <section id="gallery" class="h-screen none bg-[#a0430a] flex flex-col justify-center items-center">
+            <h2 id="galleryText"
+                class="otherHeadings text-7xl sm:text-8xl  text-amber-200 flex justify-center items-center"> </h2>
+            <div id="marquee-container"
+                class="w-full flex-col md:w-[95%] flex gap-2 overflow-hidden border-2 border-white">
 
                 <marquee behavior="alternate" direction="right" scrollamount="5">
                     <div id="marqueeImgContainer" class="w-full h-full flex gap-2">
@@ -101,7 +110,7 @@
                         <img src="https://i.postimg.cc/Gmv1rwc1/IMG-20250308-WA0102.jpg" class="h-full" alt="">
                     </div>
                 </marquee>
-                
+
                 <marquee behavior="alternate" direction="left" scrollamount="5">
                     <div id="marqueeImgContainer" class="w-full h-full flex gap-2">
                         <img src="https://i.postimg.cc/k59Pg14R/IMG-20250308-WA0103.jpg" class="h-full" alt="">
@@ -114,37 +123,100 @@
                         <img src="https://i.postimg.cc/TYWzqM5W/IMG-20250308-WA0110.jpg" class="h-full" alt="">
                     </div>
                 </marquee>
-                
-                
+
+
 
             </div>
 
         </section>
 
         <!-- location Section -->
-        <section id="whereToCome" class="bg-[#A0430a] relative">
-            <div id="parent1" class="w-full min-h-screen otherHeadings padding2 flex gap-2 text-[30vh] sm:text-[30vw]  items-center flex-nowrap whitespace-nowrap">
-                <h2 id="childOfParent1" class="bg-white rounded-2xl padding5 rightText capitalize text-yellow-400">aana kahan hai???</h2>
+        <section id="whereToCome" class="none bg-[#A0430a] relative">
+            <div id="parent1"
+                class="w-full min-h-screen otherHeadings padding2 flex gap-2 text-[30vh] sm:text-[10vh] md:text-[12vw]  items-center flex-nowrap whitespace-nowrap">
+                <h2 id="childOfParent1" class="bg-white rounded-2xl padding5 rightText capitalize text-yellow-400">aana
+                    kahan hai???</h2>
             </div>
-            <div id="parent2" class="w-full min-h-screen otherHeadings padding2 flex gap-2 text-[30vh] sm:text-[30vw]  items-center flex-nowrap whitespace-nowrap">
-                <h2 id="childOfParent2" class="bg-yellow-400 rounded-2xl padding5 rightText capitalize text-white">Ji Apne <span class="text-[35vh] sm:text-[35vw]">Ghar</span></h2>
+            <div id="parent2"
+                class="w-full min-h-screen otherHeadings padding2 flex gap-2 text-[30vh] sm:text-[10vh] md:text-[12vw]  items-center flex-nowrap whitespace-nowrap">
+                <h2 id="childOfParent2" class="bg-yellow-400 rounded-2xl padding5 rightText capitalize text-white">Ji
+                    Apne <span class="text-[35vh] sm:text-[10vh] md:text-[18vw]">Ghar</span></h2>
             </div>
-            <div id="parent3" class="w-full min-h-screen otherHeadings padding2 flex items-center gap-2 text-[30vh] sm:text-[30vw] flex-nowrap whitespace-nowrap">
-                <h2 id="childOfParent3" class="rightText capitalize text-amber-200 rounded-2xl padding5 bg-white ">Gorakhpur, Uttar Pradesh</h2>
+            <div id="parent3"
+                class="w-full min-h-screen otherHeadings padding2 flex items-center gap-2 text-[30vh] sm:text-[10vh] md:text-[12vw] flex-nowrap whitespace-nowrap">
+                <h2 id="childOfParent3" class="rightText capitalize text-amber-400 rounded-2xl padding5 bg-white ">
+                    Gorakhpur, Uttar Pradesh</h2>
             </div>
 
+            <!-- Map section -->
+            <div class="w-full md:h-screen flex flex-col flex-col-reverse md:flex-row md:flex-reverse  items-center">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3561.6015894898924!2d83.36765807505832!3d26.788966976721085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQ3JzIwLjMiTiA4M8KwMjInMTIuOCJF!5e0!3m2!1sen!2sin!4v1743318266911!5m2!1sen!2sin"
+                    class="w-[90%] h-[80%]" style="border:2px solid white; margin-left:1rem; padding: 10px;"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div
+                    class="w-1/2  sm:hidden text-center w-full h-full capitalize text-white text-xl otherHeadings font-bold">
+                    <h2>Click Below to view Large Map</h2>
+                </div>
+                <div
+                    class="w-1/2 hidden sm:text-6xl md:text-7xl lg:text-8xl flex-wrap text-wrap sm:flex justify-center items-center text-center text-white h-fit otherHeadings">
+                    <span>Just Click </span> on Direction
+                </div>
+            </div>
         </section>
-        <section id="schedule">
-            <h2>Schedule</h2>
-            <p>Details of the day's events will be updated soon.</p>
+
+        <!-- Date Section -->
+        <section id="WhenToCome" class="none w-full text-3xl flex flex-col bg-[#a0430a] min-h-screen">
+            <div class="w-full flex items-center text-3xl otherHeadings text-white font-bold tracking-wider bg-[#a0430a] h-full"
+                id="date">
+                <div class="text-center w-full padding10">
+                    <h1>Be Ready on <span class="text-4xl text-amber-200 inline-block">14 April, 2025</span></h1>
+                </div>
+            </div>
+            <div class="flex items-center flex-col justify-center headingText text-center font-extrabold text-4xl text-amber-200 sm:text-5xl md:text-6xl lg:text-8xl w-full bg-[#a0430a] h-full"
+                id="timer">
+                <h1 class="">Clock is Ticking!</h1>
+                <div class=" h-[50vh] w-full flex justify-center items-center">
+                    <div
+                        class="flex-col text-center h-full w-full sm:w-[70%] flex justify-between border-2 border-white  rounded-2xl overflow-hidden bg-amber-700 items-center  ">
+                        <div
+                            class="relative text-4xl w-full h-full flex padding gap-2 justify-evenly items-center font-mono bg-amber-700 px-6 py-4 rounded-lg text-amber-800 headingText shadow-lg">
+                            <div
+                                class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
+                                <span class="" id="days">00</span>d
+                            </div>
+                            <div
+                                class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
+                                <span class="" id="hours">00</span>h
+                            </div>
+                            <div
+                                class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
+                                <span class="" id="minutes">00</span>m
+                            </div>
+                            <div
+                                class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
+                                <span class="" id="seconds">00</span>s
+                            </div>
+                        </div>
+                        <div id="icons" class="w-full top-0 h-full absolute">
+                            <img class="w-full opacity-70" src="./Assets/Images/Stars.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </section>
+
+
+        <!-- ContactSection -->
         <section id="contact">
             <h2>Contact</h2>
             <p>For more information, please contact us at [Insert Contact Information].</p>
         </section>
     </main>
     <footer>
-        <p>&copy; [Year] Mundan Ceremony. All rights reserved.</p>
+        <p>&copy;Designed And Developed By Sachin Sharma </p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
         integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="

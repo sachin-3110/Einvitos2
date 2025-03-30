@@ -31,9 +31,14 @@ body{
    
 }
 .padding5{
-    padding-left:5rem;
-    padding-right:5rem;
+    padding-left:3rem;
+    padding-right:3rem;
+    margin:2rem;
    
+}
+.padding{
+    padding-left:2rem;
+    padding-right:2rem;
 }
 #galleryText{
     padding-left:15px;
