@@ -11,29 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="">
-
-    <!-- <div class="w-2/3  z-20 absolute top-0 sm:top-10 right-0  text-white">
-            <div id="scrollOption"><i class="text-white text-5xl fa-solid fa-arrow-up-from-bracket"></i></div>
-            <div id="imagesCarouselAlbumTop" class="flex gap-1 p-1 justify-between items-center w-full">
-                <div id="image" class="shrink-0 flex justify-center items-center relative duration-250 group h-full ">
-                    <img src="https://i.postimg.cc/Kz8Xn1tZ/IMG-20250308-WA0105.jpg
-                    " class="sm:group-hover:-rotate-15 h-[20vh] duration-500 hover:scale-[2.5]" alt="">
-                </div>
-                <div id="image" class="shrink-0 flex justify-center items-center duration-250 group  h-full ">
-                    <img src="TestImg.jpeg" class="sm:group-hover:-rotate-15 h-[20vh] duration-500" alt="">
-                </div>
-                <div id="image" class="shrink-0 flex justify-center items-center duration-250 group h-full ">
-                    <img src="TestImg.jpeg" class="sm:group-hover:-rotate-15 h-[20vh] duration-500" alt="">
-                </div>
-                <div id="image" class="shrink-0 flex justify-center items-center duration-250 group  h-full ">
-                    <img src="TestImg.jpeg" class="sm:group-hover:-rotate-15 h-[20vh] duration-500" alt="">
-                </div>
-              
-            </div>
-
-        </div> -->
-
+<body class="relative">
 
 
     <!-- chalane ke liye pehle ye sab karna hai  
@@ -71,169 +49,175 @@
         </div>
     </header>
 
-    <main id="mainContainer" class="flex-col relative overflow-x-hidden">
-        <div id="starAnimation" class="text-[50vh] text-amber-200/20 fixed -top-40 left-0 otherHeadings">*</div>
-        <div id="starAnimation" class="text-[50vh] text-amber-200/20 fixed -top-40 right-0 otherHeadings">*</div>
-        <!-- Home section -->
-        <section id="home"
-            class="none w-full flex justify-center items-center min-h-screen bg-[#a0430a] text-white otherHeadings">
-            <div
-                class="padding10 w-[90%] overflow-hidden md:w-2/3 border-2  justify-center items-center text-center text-2xl">
-                <h2 class="text-3xl text-amber-200 mkhh"><span>Mundan</span> <span>Kya</span> <span>hota</span>
-                    <span>hai?</span>
-                </h2>
-                <div class="relative">
-                    <p id="mundanDescp" class="">
-                    </p>
-                    <div class="text-8xl">*</div>
-                </div>
-            </div>
-            <!-- <p>Location: [Insert Location]</p> -->
-        </section>
-
-        <!-- gallery section -->
-        <section id="gallery" class="h-screen none bg-[#a0430a] flex flex-col justify-center items-center">
-            <h2 id="galleryText"
-                class="otherHeadings text-7xl sm:text-8xl  text-amber-200 flex justify-center items-center"> </h2>
-            <div id="marquee-container"
-                class="w-full flex-col md:w-[95%] flex gap-2 overflow-hidden border-2 border-white">
-
-                <marquee behavior="alternate" direction="right" scrollamount="5">
-                    <div id="marqueeImgContainer" class="w-full h-full flex gap-2">
-                        <img src="https://i.postimg.cc/W3NVXWcc/IMG-20250308-WA0081.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/bJmhMxqD/IMG-20250308-WA0096.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/yxWHzDNf/IMG-20250308-WA0097.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/Y0Vw2tGt/IMG-20250308-WA0098.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/xjFQ33sB/IMG-20250308-WA0099.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/fTtN2Spy/IMG-20250308-WA0100.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/PrgkBrn4/IMG-20250308-WA0101.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/Gmv1rwc1/IMG-20250308-WA0102.jpg" class="h-full" alt="">
-                    </div>
-                </marquee>
-
-                <marquee behavior="alternate" direction="left" scrollamount="5">
-                    <div id="marqueeImgContainer" class="w-full h-full flex gap-2">
-                        <img src="https://i.postimg.cc/k59Pg14R/IMG-20250308-WA0103.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/xdRDJvJx/IMG-20250308-WA0104.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/Kz8Xn1tZ/IMG-20250308-WA0105.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/zBtspqkT/IMG-20250308-WA0106.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/RhWjD2Py/IMG-20250308-WA0107.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/Gt6ZwzV2/IMG-20250308-WA0108.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/J7gwk40L/IMG-20250308-WA0109.jpg" class="h-full" alt="">
-                        <img src="https://i.postimg.cc/TYWzqM5W/IMG-20250308-WA0110.jpg" class="h-full" alt="">
-                    </div>
-                </marquee>
-
-
-
-            </div>
-
-        </section>
-
-        <!-- location Section -->
-        <section id="whereToCome" class="none bg-[#A0430a] relative">
-            <div id="parent1"
-                class="w-full min-h-screen otherHeadings padding2 flex gap-2 text-[30vh] sm:text-[10vh] md:text-[12vw]  items-center flex-nowrap whitespace-nowrap">
-                <h2 id="childOfParent1" class="bg-white rounded-2xl padding5 rightText capitalize text-yellow-400">aana
-                    kahan hai???</h2>
-            </div>
-            <div id="parent2"
-                class="w-full min-h-screen otherHeadings padding2 flex gap-2 text-[30vh] sm:text-[10vh] md:text-[12vw]  items-center flex-nowrap whitespace-nowrap">
-                <h2 id="childOfParent2" class="bg-yellow-400 rounded-2xl padding5 rightText capitalize text-white">Ji
-                    Apne <span class="text-[35vh] sm:text-[10vh] md:text-[18vw]">Ghar</span></h2>
-            </div>
-            <div id="parent3"
-                class="w-full min-h-screen otherHeadings padding2 flex items-center gap-2 text-[30vh] sm:text-[10vh] md:text-[12vw] flex-nowrap whitespace-nowrap">
-                <h2 id="childOfParent3" class="rightText capitalize text-amber-400 rounded-2xl padding5 bg-white ">
-                    Gorakhpur, Uttar Pradesh</h2>
-            </div>
-
-            <!-- Map section -->
-            <div class="w-full md:h-screen flex flex-col flex-col-reverse md:flex-row md:flex-reverse  items-center">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3561.6015894898924!2d83.36765807505832!3d26.788966976721085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQ3JzIwLjMiTiA4M8KwMjInMTIuOCJF!5e0!3m2!1sen!2sin!4v1743318266911!5m2!1sen!2sin"
-                    class="w-[90%] h-[80%]" style="border:2px solid white; margin-left:1rem; padding: 10px;"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="mainContainer" class="h-0 w-full overflow-hidden">
+        <main class="none flex-col relative overflow-x-hidden">
+            <div id="starAnimation1" class="text-[50vh] text-amber-200/50 fixed z-500 -top-40 left-0 otherHeadings">*</div>
+            <div id="starAnimation2" class="text-[50vh] text-amber-200/50 fixed z-500 -top-40 right-0 otherHeadings">*</div>
+            <!-- Home section -->
+            <section id="home"
+                class="none w-full flex justify-center  items-center min-h-screen bg-[#a0430a] text-white otherHeadings">
                 <div
-                    class="w-1/2  sm:hidden text-center w-full h-full capitalize text-white text-xl otherHeadings font-bold">
-                    <h2>Click Below to view Large Map</h2>
+                    class="padding10 w-[90%] overflow-hidden md:w-2/3 border-4 rounded-2xl  justify-center items-center text-center text-2xl">
+                    <h2 class="text-5xl text-amber-200 mkhh font-bold"><span>Mundan</span> <span>Kya</span> <span>hota</span>
+                        <span>hai?</span>
+                    </h2>
+                    <div class="relative">
+                        <p id="mundanDescp" class="tracking-wider">
+                        </p>
+                        <div class="text-8xl">*</div>
+                    </div>
                 </div>
-                <div
-                    class="w-1/2 hidden sm:text-6xl md:text-7xl lg:text-8xl flex-wrap text-wrap sm:flex justify-center items-center text-center text-white h-fit otherHeadings">
-                    <span>Just Click </span> on Direction
+                <!-- <p>Location: [Insert Location]</p> -->
+            </section>
+    
+            <!-- gallery section -->
+            <section id="gallery" class="h-screen none bg-[#a0430a] flex flex-col justify-center items-center">
+                <h2 id="galleryText"
+                    class="otherHeadings text-7xl sm:text-8xl  text-amber-200 flex justify-center items-center"> </h2>
+                <div id="marquee-container"
+                    class="w-full flex-col md:w-[95%] flex gap-2 overflow-hidden border-2 border-white">
+    
+                    <marquee behavior="alternate" direction="right" scrollamount="5">
+                        <div id="marqueeImgContainer" class="w-full h-full flex gap-2">
+                            <img src="https://i.postimg.cc/W3NVXWcc/IMG-20250308-WA0081.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/bJmhMxqD/IMG-20250308-WA0096.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/yxWHzDNf/IMG-20250308-WA0097.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/Y0Vw2tGt/IMG-20250308-WA0098.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/xjFQ33sB/IMG-20250308-WA0099.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/fTtN2Spy/IMG-20250308-WA0100.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/PrgkBrn4/IMG-20250308-WA0101.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/Gmv1rwc1/IMG-20250308-WA0102.jpg" class="h-full" alt="">
+                        </div>
+                    </marquee>
+    
+                    <marquee behavior="alternate" direction="left" scrollamount="5">
+                        <div id="marqueeImgContainer" class="w-full h-full flex gap-2">
+                            <img src="https://i.postimg.cc/k59Pg14R/IMG-20250308-WA0103.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/xdRDJvJx/IMG-20250308-WA0104.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/Kz8Xn1tZ/IMG-20250308-WA0105.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/zBtspqkT/IMG-20250308-WA0106.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/RhWjD2Py/IMG-20250308-WA0107.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/Gt6ZwzV2/IMG-20250308-WA0108.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/J7gwk40L/IMG-20250308-WA0109.jpg" class="h-full" alt="">
+                            <img src="https://i.postimg.cc/TYWzqM5W/IMG-20250308-WA0110.jpg" class="h-full" alt="">
+                        </div>
+                    </marquee>
+    
+    
+    
                 </div>
-            </div>
-        </section>
-
-        <!-- Date Section -->
-        <section id="WhenToCome" class="none w-full text-3xl flex flex-col bg-[#a0430a] min-h-screen">
-            <div class="w-full flex items-center text-3xl otherHeadings text-white font-bold tracking-wider bg-[#a0430a] h-full"
-                id="date">
-                <div class="text-center w-full padding10">
-                    <h1>Be Ready on <span class="text-4xl text-amber-200 inline-block">14 April, 2025</span></h1>
+    
+            </section>
+            <section class="pinAnimation bg-[#a0430a]">
+                <div id="parent1"
+                    class="w-full min-h-screen otherHeadings padding2 flex gap-2 text-[20vh] sm:text-[10vh] md:text-[12vw]  items-center flex-nowrap whitespace-nowrap">
+                    <h2 id="childOfParent1" class="bg-white rounded-2xl padding5 rightText capitalize text-yellow-400">aana
+                        kahan hai???</h2>
                 </div>
-            </div>
-            <div class="flex items-center flex-col justify-center headingText text-center font-extrabold text-4xl text-amber-200 sm:text-5xl md:text-6xl lg:text-8xl w-full bg-[#a0430a] h-full"
-                id="timer">
-                <h1 class="">Clock is Ticking!</h1>
-                <div class=" h-[50vh] w-full flex justify-center items-center">
+                <div id="parent2"
+                    class="w-full min-h-screen otherHeadings padding2 flex gap-2 text-[20vh] sm:text-[10vh] md:text-[12vw]  items-center flex-nowrap whitespace-nowrap">
+                    <h2 id="childOfParent2" class="bg-yellow-400 rounded-2xl padding5 rightText capitalize text-white">Ji
+                        Apne <span class="text-[25vh] sm:text-[10vh] md:text-[18vw] text-orange-700">Ghar</span></h2>
+                </div>
+                <div id="parent3"
+                    class="w-full min-h-screen otherHeadings padding2 flex items-center gap-2 text-[20vh] sm:text-[10vh] md:text-[12vw] flex-nowrap whitespace-nowrap">
+                    <h2 id="childOfParent3" class="rightText capitalize text-amber-400 rounded-2xl padding5 bg-white ">
+                        Gorakhpur, Uttar Pradesh</h2>
+                </div>  
+    
+            </section>
+            <!-- location Section -->
+            <section id="whereToCome" class="none bg-[#A0430a] relative">
+                
+    
+                <!-- Map section -->
+                <div class="w-full md:h-screen flex flex-col flex-col-reverse md:flex-row md:flex-reverse  items-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3561.6015894898924!2d83.36765807505832!3d26.788966976721085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQ3JzIwLjMiTiA4M8KwMjInMTIuOCJF!5e0!3m2!1sen!2sin!4v1743318266911!5m2!1sen!2sin"
+                        class="w-[90%] h-[80%]" style="border:2px solid white; margin-left:1rem; padding: 10px;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <div
-                        class="flex-col text-center h-full w-full sm:w-[70%] flex justify-between border-2 border-white  rounded-2xl overflow-hidden bg-amber-700 items-center  ">
-                        <div
-                            class="relative text-4xl w-full h-full flex padding gap-2 justify-evenly items-center font-mono bg-amber-700 px-6 py-4 rounded-lg text-amber-800 headingText shadow-lg">
-                            <div
-                                class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
-                                <span class="" id="days">00</span>d
-                            </div>
-                            <div
-                                class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
-                                <span class="" id="hours">00</span>h
-                            </div>
-                            <div
-                                class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
-                                <span class="" id="minutes">00</span>m
-                            </div>
-                            <div
-                                class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
-                                <span class="" id="seconds">00</span>s
-                            </div>
-                        </div>
-                        <div id="icons" class="w-full top-0 h-full absolute">
-                            <img class="w-full opacity-70" src="./Assets/Images/Stars.png" alt="">
-                        </div>
-
+                        class="w-1/2  sm:hidden text-center w-full h-full capitalize text-white text-xl otherHeadings font-bold">
+                        <h2>Click Below to view Large Map</h2>
+                    </div>
+                    <div
+                        class="w-1/2 hidden sm:text-6xl md:text-7xl lg:text-8xl flex-wrap text-wrap sm:flex justify-center items-center text-center text-white h-fit otherHeadings">
+                        <span>Just Click </span> on Direction
                     </div>
                 </div>
-
-            </div>
-        </section>
-
-
-        <!-- Parents Section -->
-        <section id="Parents" class="flex justify-center items-center w-full min-h-screen bg-[#a0430a]">
-            <div id="textArea" class="flex justify-center items-center ">
-                <div class="w-[70%] h-full text-3xl md:text-6xl text-amber-400 capitalize otherHeadings">
-                    <span class=" hover:bg-black/20 duration-500 text-yellow-200 font-bold">Father</span>
-                    <span class=" hover:bg-black/20 duration-500 text-orange-200 underline inline-block"> Uma Shankar Sharma</span>
-                    <span> and</span>
-                    <span class=" hover:bg-black/20 duration-500 text-yellow-200 font-bold">Mother</span>
-                    <span class=" hover:bg-black/20 duration-500 text-orange-200 underline inline-block"> Priyanka Sharma</span>
-                    <span> will give their
-                        blessings to there son</span>
-                    <span class=" hover:bg-black/20 duration-500 text-orange-200 underline
-                text-orange-200 underline inline-block">Kartik Sharma</span>
-                    <span>in the presence of his</span>
-                    <span>
-                        <span class=" hover:bg-black/20 duration-500  text-orange-200 underline"> aunts</span> and
-                        <span class=" hover:bg-black/20 duration-500  text-orange-200 underline"> uncles</span>
-                    </span>
+            </section>
+    
+            <!-- Date Section -->
+            <section id="WhenToCome" class="none w-full text-3xl flex flex-col bg-[#a0430a] min-h-screen">
+                <div class="w-full flex items-center text-3xl otherHeadings text-white font-bold tracking-wider bg-[#a0430a] h-full"
+                    id="date">
+                    <div class="text-center w-full padding10">
+                        <h1>Be Ready on <span class="text-4xl text-amber-200 inline-block">14 April, 2025</span></h1>
+                    </div>
                 </div>
-            </div>
-
-        </section>
-    </main>
-    <footer class="bg-amber-800 text-white text-center">
-        <p>Thanks For Visiting &copy;Designed And Developed By Sachin Sharma </p>
+                <div class="flex items-center flex-col justify-center headingText text-center font-extrabold text-4xl text-amber-200 sm:text-5xl md:text-6xl lg:text-8xl w-full bg-[#a0430a] h-full"
+                    id="timer">
+                    <h1 class="">Clock is Ticking!</h1>
+                    <div class=" h-[50vh] w-full flex justify-center items-center">
+                        <div
+                            class="flex-col text-center h-full w-full sm:w-[70%] flex justify-between border-2 border-white  rounded-2xl overflow-hidden bg-amber-700 items-center  ">
+                            <div
+                                class="relative text-4xl w-full h-full flex padding gap-2 justify-evenly items-center font-mono bg-amber-700 px-6 py-4 rounded-lg text-amber-800 headingText shadow-lg">
+                                <div
+                                    class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
+                                    <span class="" id="days">00</span>d
+                                </div>
+                                <div
+                                    class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
+                                    <span class="" id="hours">00</span>h
+                                </div>
+                                <div
+                                    class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
+                                    <span class="" id="minutes">00</span>m
+                                </div>
+                                <div
+                                    class="bg-white w-30 sm:w-40 h-27 sm:h-40 flex justify-center items-center rounded-2xl text-4xl sm:text-5xl opacity-80">
+                                    <span class="" id="seconds">00</span>s
+                                </div>
+                            </div>
+                            <div id="icons" class="w-full top-0 h-full absolute top-0 ">
+                                <img class="w-full opacity-70" src="./Assets/Images/Stars.png" alt="">
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </section>
+    
+    
+            <!-- Parents Section -->
+            <section id="Parents" class="flex justify-center items-center w-full min-h-screen bg-[#a0430a]">
+                <div id="textArea" class="flex justify-center items-center ">
+                    <div class="w-[70%] h-full text-3xl md:text-6xl text-amber-400 capitalize otherHeadings">
+                        <span class=" hover:bg-black/20 duration-500 text-yellow-200 font-bold">Father</span>
+                        <span class=" hover:bg-black/20 duration-500 text-orange-200 underline inline-block"> Uma Shankar Sharma</span>
+                        <span> and</span>
+                        <span class=" hover:bg-black/20 duration-500 text-yellow-200 font-bold">Mother</span>
+                        <span class=" hover:bg-black/20 duration-500 text-orange-200 underline inline-block"> Priyanka Sharma</span>
+                        <span> will give their
+                            blessings to there son</span>
+                        <span class=" hover:bg-black/20 duration-500 text-orange-200 underline
+                    text-orange-200 underline inline-block">Kartik Sharma</span>
+                        <span>in the presence of his</span>
+                        <span>
+                            <span class=" hover:bg-black/20 duration-500  text-orange-200 underline"> aunts</span> and
+                            <span class=" hover:bg-black/20 duration-500  text-orange-200 underline"> uncles</span>
+                        </span>
+                    </div>
+                </div>
+    
+            </section>
+        </main>
+        
+    </div>
+    <footer class="bg-[#a0430a] w-full text-center absolute bottom-0 text-white text-center">
+        <p>Thanks For visiting &copy;Designed And Developed By Sachin Sharma </p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
         integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="

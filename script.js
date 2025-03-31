@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Placeholder for future JavaScript functionality
-    LoaderProgressBar()
+    LoaderAnimation()
 });
+
+gsap.registerPlugin(ScrollTrigger)
 
 var tl = gsap.timeline()
 var tl2 = gsap.timeline()
@@ -12,12 +13,7 @@ let mundanTxt = "Mundan, yaani pehli baar baal kaatna, ek bahut hi mahatvapurn H
 
 let splitMundanTxt = mundanTxt.split(" ")
 let mundanDescp = document.getElementById("mundanDescp")
-splitMundanTxt.forEach(element => {
-    let newSpanEle = document.createElement("span")
-    newSpanEle.innerHTML = element + " "
-    mundanDescp.appendChild(newSpanEle)
 
-})
 
 
 // Gallery Text
@@ -27,100 +23,121 @@ splitGaltxt = galleryText.split("")
 splitGaltxt.forEach(elem => {
     span = document.createElement("span")
     span.innerHTML = elem
-
     galtxt.appendChild(span)
 })
 
 
 
-
-
-
-
-gsap.registerPlugin(ScrollTrigger)
-
-gsap.from("#Parents #textArea",{
-    delay:1,
-    duration:1,
-    opacity:0,
-    scrollTrigger:{
-        trigger:"#Parents"
+gsap.from("#Parents #textArea", {
+    delay: 1,
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: "#Parents"
     }
 
 })
+var main = document.getElementById("mainContainer")
+function MainVisible(){
 
-function textMundaAnimation() {
-    gsap.from("#mundanDescp span", {
-        opacity: 0, y: 20, stagger: 0.3, duration: 1, scrollTrigger: (".mundaDescp", {
-            scrub: true
-
-        })
-    });
-    gsap.from("#mainContainer #starAnimation", {
-        rotate: 360,
-        duration: 2,
-        scrollTrigger: ("main", {
-            scrub: true
-        })
-    });
-
+    main.style.display="flex";
+    main.style.backgroundColor="black"
+    gsap.from("#mainContainer",{
+        height:"100%",
+        opacity:0,
+        duration:2,
+        onComplete(){
+            textMundaAnimation()
+        }
+    })
 }
+function LoaderAnimation() {
 
-function LoaderProgressBar() {
-    tl2.from("#kkm", {
+    tl.from("#kkm", {
         duration: 1.5,
         width: 0,
         ease: "back.out(1.7)",
     })
-    tl2.to("#kkm h1", {
-        delay: 0.5,
-        duration: 1,
+    tl.to("#kkm h1", {
+        delay: 0.25,
+        duration: 0.5,
         color: "yellow",
     })
-    tl2.to("#progress-bar", {
+    tl.to("#progress-bar", {
         delay: 0,
-        width: "100%",  // Progress bar full hone tak badhega
-        duration: 3,    // 3 seconds me complete hoga
-        ease: "power2.out" // Smooth easing effect
+        width: "100%",  
+        duration: 2.5,    
+        ease: "power2.out" 
     });
-    tl2.to("#clickAnyWhere", {
+    tl.to("#clickAnyWhere", {
         duration: 0.5,
         opacity: 1,
         y: 5,
         repeat: -1,
         yoyo: true,
     })
-}
-
-function LoaderAnimation() {
-
-
     tl.to("#Loader", {
         delay: 0.5,
         duration: 2,
         ease: Power2.easeOut,
         y: "-100%",
         onComplete() {
-            var main = document.getElementById("mainContainer")
-            main.style.display = "flex";
+            var loaderSelector = document.getElementById("Loader")
+            var footer = document.getElementsByTagName("footer")
+            loaderSelector.style.display="none";  
+            MainVisible()
         }
     }
+    
+)
 
-
-    )
-    tl.from("#mainContainer", {
-        duration: 0.5,
-        opacity: 1,
-        onComplete() {
-            textMundaAnimation()
-        }
-    })
-
+  
 
 }
 
+function textMundaAnimation() {
+    var NewTimeline=gsap.timeline()
+    splitMundanTxt.forEach(element => {
+        let newSpanEle = document.createElement("span")
+        newSpanEle.innerHTML = element + " "
+        mundanDescp.appendChild(newSpanEle)
+    
+    })  
+    NewTimeline.from("#mundanDescp span", {
+        opacity: 0, y: 20, stagger: 0.3, duration: 2,
+        scrollTrigger: ("#mundaDescp", {
+            stagger: 0.1,
+            start:"top",
+            end:"3%",
+            scrub: 1,
+            onComplete(){
+                
+            }
 
-// jab pin property ko use karenge tab hum humaesh trigger karenge parent ko 
+        })
+    });
+    NewTimeline.from("#mainContainer #starAnimation1", {
+        rotate: 360,
+        duration: 1,
+        yoyo: true,
+        scrollTrigger: ("main", {
+            scrub: 2
+        })
+    });
+    NewTimeline.from("#mainContainer #starAnimation2", {
+        rotate: -360,
+        duration: 1,
+        yoyo: true,
+        scrollTrigger: ("main", {
+            scrub: 2,
+        })
+    });
+
+}
+
+textPinAnimation()
+
+
 function textPinAnimation() {
     var tlTextAni = gsap.timeline()
     gsap.to("#parent1 h2", {
@@ -159,14 +176,10 @@ function textPinAnimation() {
 
 
 }
-textPinAnimation()
 
 
 
-window.addEventListener("click", function () {
-    LoaderAnimation()
 
-});
 
 // Selecting elements correctly
 var Days = document.getElementById("days");
@@ -193,7 +206,7 @@ function updateCountdown() {
     // Ensuring leading zeros (01 instead of 1)
     const format = (num) => (num < 10 ? `0${num}` : num);
 
-    if (Days && Hours && Minutes && Seconds) { 
+    if (Days && Hours && Minutes && Seconds) {
         Days.innerHTML = format(days);
         Hours.innerHTML = format(hours);
         Minutes.innerHTML = format(minutes);
