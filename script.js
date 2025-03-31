@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     LoaderAnimation()
 });
 
+
 gsap.registerPlugin(ScrollTrigger)
 
 var tl = gsap.timeline()
@@ -13,8 +14,6 @@ let mundanTxt = "Mundan, yaani pehli baar baal kaatna, ek bahut hi mahatvapurn H
 
 let splitMundanTxt = mundanTxt.split(" ")
 let mundanDescp = document.getElementById("mundanDescp")
-
-
 
 // Gallery Text
 galleryText = "Gallery"
@@ -76,11 +75,12 @@ function LoaderAnimation() {
         repeat: -1,
         yoyo: true,
     })
+
     tl.to("#Loader", {
         delay: 0.5,
-        duration: 2,
+        duration:4,
+        y:"-100%",
         ease: Power2.easeOut,
-        y: "-100%",
         onComplete() {
             var loaderSelector = document.getElementById("Loader")
             var footer = document.getElementsByTagName("footer")
@@ -176,8 +176,6 @@ function textPinAnimation() {
 
 
 }
-
-
 
 
 
