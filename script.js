@@ -41,15 +41,7 @@ splitGaltxt.forEach(elem => {
 
 
 
-gsap.from("#Parents #textArea", {
-    delay: 1,
-    duration: 1,
-    opacity: 0,
-    scrollTrigger: {
-        trigger: "#Parents"
-    }
 
-})
 var main = document.getElementById("mainContainer")
 function MainVisible(){
 
@@ -135,15 +127,7 @@ function textMundaAnimation() {
     })  
     NewTimeline.from("#newmundanDescp span", {
         opacity: 0, y: 20, stagger: 0.3, duration: 2,
-        // scrollTrigger: ("#newmundaDescp", {
-        //     stagger: 0.1,
-        //     start:"top",
-        //     end:"3%",
-        //     onComplete(){
-                
-        //     }
-
-        // })
+        
     });
     NewTimeline.from("#mainContainer #starAnimation1", {
         rotate: 360,
@@ -201,7 +185,16 @@ function textPinAnimation() {
 
         }
     })
-
+    gsap.from("#Parents #textArea", {
+        delay: 1,
+        duration: 2,
+        opacity: 0,
+        y:100,
+        scrollTrigger: {
+            trigger: "#Parents"
+        }
+    
+    })
 
 
 }
