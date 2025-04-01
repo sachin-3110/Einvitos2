@@ -22,7 +22,7 @@ var tl3 = gsap.timeline()
 
 // let mundanTxt = "Mundan, yaani pehli baar baal kaatna, ek bahut hi mahatvapurn Hindu sanskar hai jo chhoti umar ke bachchon ka sir mundvane ke roop me manaya jata hai. Yeh paramparaik vidhi Hindu dharm me shuddhi aur sanskari jeevan ki shuruaat ka pratik mana jata hai."
 let mundanTxt = "We are delighted to have you join us in celebrating Kartik Sharma’s Mundan Ceremony. Your presence means the world to us!"
-let HindimundanTxt = "हमें खुशी है कि आप कार्तिक शर्मा के मुंडन समारोह में हमारे साथ शामिल हुए हैं। आपकी उपस्थिति हमारे लिए बहुत महत्वपूर्ण है!"
+let HindimundanTxt = "हमें खुशी होगी कि आप कार्तिक शर्मा के मुंडन समारोह में हमारे साथ शामिल हों। आपकी उपस्थिति हमारे लिए बहुत महत्वपूर्ण होगी।"
 
 let splitMundanTxt = mundanTxt.split(" ")
 let hindisplitMundanTxt = HindimundanTxt.split(" ")
@@ -117,18 +117,34 @@ function textMundaAnimation() {
     })  
     
    
-    hindisplitMundanTxt.forEach(element => {
+    hindisplitMundanTxt.forEach((element,index) => {
         let newSpanEle = document.createElement("span")
         newSpanEle.innerHTML = element + " "
         mundanDescp.appendChild(newSpanEle)
         newSpanEle.classList.add("font-bold")
-        
+     
+       
+            if (index === splitMundanTxt.length) {
+                let newDivElement=document.createElement("div")
+                mundanDescp.appendChild(newDivElement);
+                newDivElement.innerHTML="|| धन्यवाद ||"
+                newDivElement.classList.add("NewDivForThanks","font-bold","text-2xl")
+            }
+
     
     })  
+   
     NewTimeline.from("#newmundanDescp span", {
-        opacity: 0, y: 20, stagger: 0.3, duration: 2,
-        
+        opacity: 0, y: 20, stagger: 0.3, duration: 2,    
+        onComplete(){
+
+        }    
     });
+    NewTimeline.from(".NewDivForThanks",{
+        delay:0,
+        opacity: 0, y: 20, duration: 0.5,  
+    })
+    NewTimeline.from("")
     NewTimeline.from("#mainContainer #starAnimation1", {
         rotate: 360,
         duration: 1,
