@@ -2,6 +2,16 @@ document.addEventListener('DOMContentLoaded', function () {
     LoaderAnimation()
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    let audio = document.getElementById("bgMusic");
+    audio.volume = 1; // Adjust volume if needed
+
+    document.body.addEventListener("click", function () {
+      if (audio.paused) {
+        audio.play();
+      }
+    });
+  });
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -10,10 +20,14 @@ var tl2 = gsap.timeline()
 var tl3 = gsap.timeline()
 
 
-let mundanTxt = "Mundan, yaani pehli baar baal kaatna, ek bahut hi mahatvapurn Hindu sanskar hai jo chhoti umar ke bachchon ka sir mundvane ke roop me manaya jata hai. Yeh paramparaik vidhi Hindu dharm me shuddhi aur sanskari jeevan ki shuruaat ka pratik mana jata hai."
+// let mundanTxt = "Mundan, yaani pehli baar baal kaatna, ek bahut hi mahatvapurn Hindu sanskar hai jo chhoti umar ke bachchon ka sir mundvane ke roop me manaya jata hai. Yeh paramparaik vidhi Hindu dharm me shuddhi aur sanskari jeevan ki shuruaat ka pratik mana jata hai."
+let mundanTxt = "We are delighted to have you join us in celebrating Kartik Sharma’s Mundan Ceremony. Your presence means the world to us!"
+let HindimundanTxt = "हमें खुशी है कि आप कार्तिक शर्मा के मुंडन समारोह में हमारे साथ शामिल हुए हैं। आपकी उपस्थिति हमारे लिए बहुत महत्वपूर्ण है!"
 
 let splitMundanTxt = mundanTxt.split(" ")
-let mundanDescp = document.getElementById("mundanDescp")
+let hindisplitMundanTxt = HindimundanTxt.split(" ")
+// let mundanDescp = document.getElementById("mundanDescp")
+let mundanDescp = document.getElementById("newmundanDescp")
 
 // Gallery Text
 galleryText = "Gallery"
@@ -21,7 +35,7 @@ galtxt = document.getElementById("galleryText")
 splitGaltxt = galleryText.split("")
 splitGaltxt.forEach(elem => {
     span = document.createElement("span")
-    span.innerHTML = elem
+    span.innerHTML = elem;
     galtxt.appendChild(span)
 })
 
@@ -97,24 +111,39 @@ function LoaderAnimation() {
 
 function textMundaAnimation() {
     var NewTimeline=gsap.timeline()
-    splitMundanTxt.forEach(element => {
+    let breakStatement=document.createElement("br")
+    
+    splitMundanTxt.forEach((element,index) => {
         let newSpanEle = document.createElement("span")
         newSpanEle.innerHTML = element + " "
         mundanDescp.appendChild(newSpanEle)
+
+        if (index === splitMundanTxt.length - 1) {
+            mundanDescp.appendChild(document.createElement("br"));
+        }
+
+    })  
+    
+   
+    hindisplitMundanTxt.forEach(element => {
+        let newSpanEle = document.createElement("span")
+        newSpanEle.innerHTML = element + " "
+        mundanDescp.appendChild(newSpanEle)
+        newSpanEle.classList.add("font-bold")
+        
     
     })  
-    NewTimeline.from("#mundanDescp span", {
+    NewTimeline.from("#newmundanDescp span", {
         opacity: 0, y: 20, stagger: 0.3, duration: 2,
-        scrollTrigger: ("#mundaDescp", {
-            stagger: 0.1,
-            start:"top",
-            end:"3%",
-            scrub: 1,
-            onComplete(){
+        // scrollTrigger: ("#newmundaDescp", {
+        //     stagger: 0.1,
+        //     start:"top",
+        //     end:"3%",
+        //     onComplete(){
                 
-            }
+        //     }
 
-        })
+        // })
     });
     NewTimeline.from("#mainContainer #starAnimation1", {
         rotate: 360,

@@ -12,8 +12,10 @@
 </head>
 
 <body class="relative">
-
-
+    <audio id="bgMusic" loop>
+        <source src="./Assets/music/bgm.mp3" type="audio/mpeg">
+      </audio>
+      
     <!-- chalane ke liye pehle ye sab karna hai  
          1.) loader mai se "none" hatana hai 
          2.) #mainContainer mai hidden likhna hai
@@ -27,6 +29,7 @@
     <header id="Loader"
         class=" absolute none z-1000 md:w-full text-center headingText h-screen bg-[#a0430a] font-bold tracking-[2px] text-4xl md:text-6xl text-white py-10 sm:p-0 flex flex-col justify-center items-center">
         <p class="text-2xl font-bold tracking-[5px]">Join us in celebrating this special occasion!</p>
+        <p class="text-2xl font-bold tracking-[5px]">मुंडन संस्कार निमंत्रण</p>
         <div
             class="w-auto flex items-center justify-center shadow-[12px_12px_20px_5px_rgba(0,_0,_0,_0.1)] bg-orange-400 text-6xl sm:text-6xl rounded-xl">
             <div id="kkm" class="p-10 w-auto flex md:flex-row flex-col justify-center items-center gap-2">
@@ -54,7 +57,7 @@
             <div id="starAnimation1" class="text-[50vh] text-amber-200/50 fixed z-500 -top-40 left-0 otherHeadings">*</div>
             <div id="starAnimation2" class="text-[50vh] text-amber-200/50 fixed z-500 -top-40 right-0 otherHeadings">*</div>
             <!-- Home section -->
-            <section id="home"
+            <!-- <section id="home"
                 class="none w-full flex justify-center  items-center min-h-screen bg-[#a0430a] text-white otherHeadings">
                 <div
                     class="padding10 w-[90%] overflow-hidden md:w-2/3 border-4 rounded-2xl  justify-center items-center text-center text-2xl">
@@ -67,7 +70,20 @@
                         <div class="text-8xl">*</div>
                     </div>
                 </div>
-                <!-- <p>Location: [Insert Location]</p> -->
+            </section> -->
+             <section id="home"
+                class="none w-full flex justify-center  items-center min-h-screen bg-[#a0430a] text-white otherHeadings">
+                <div
+                    class="padding10 w-[90%] overflow-hidden md:w-2/3 border-4 rounded-2xl  justify-center items-center text-center text-2xl">
+                    <h2 class="text-5xl text-amber-200 mkhh font-bold"><span>Warm</span> <span>Welcome</span> <span>to</span>
+                        <span>Mundan Ceremony</span>
+                    </h2>
+                    <div class="relative">
+                        <p id="newmundanDescp" class="tracking-wider">
+                        </p>
+                        <div class="text-8xl">*</div>
+                    </div>
+                </div>
             </section>
     
             <!-- gallery section -->
