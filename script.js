@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
     audio.volume = 1; // Adjust volume if needed
 
     document.body.addEventListener("click", function () {
-      if (audio.paused) {
-        audio.play();
-      }
+        if (audio.paused) {
+            audio.play();
+        }
     });
-  });
+});
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -43,15 +43,15 @@ splitGaltxt.forEach(elem => {
 
 
 var main = document.getElementById("mainContainer")
-function MainVisible(){
+function MainVisible() {
 
-    main.style.display="flex";
-    main.style.backgroundColor="black"
-    gsap.from("#mainContainer",{
-        height:"100%",
-        opacity:0,
-        duration:2,
-        onComplete(){
+    main.style.display = "flex";
+    main.style.backgroundColor = "black"
+    gsap.from("#mainContainer", {
+        height: "100%",
+        opacity: 0,
+        duration: 2,
+        onComplete() {
             textMundaAnimation()
         }
     })
@@ -70,9 +70,9 @@ function LoaderAnimation() {
     })
     tl.to("#progress-bar", {
         delay: 0,
-        width: "100%",  
-        duration: 2.5,    
-        ease: "power2.out" 
+        width: "100%",
+        duration: 2.5,
+        ease: "power2.out"
     });
     tl.to("#clickAnyWhere", {
         duration: 0.5,
@@ -84,28 +84,28 @@ function LoaderAnimation() {
 
     tl.to("#Loader", {
         delay: 0.5,
-        duration:4,
-        y:"-100%",
+        duration: 4,
+        y: "-100%",
         ease: Power2.easeOut,
         onComplete() {
             var loaderSelector = document.getElementById("Loader")
             var footer = document.getElementsByTagName("footer")
-            loaderSelector.style.display="none";  
+            loaderSelector.style.display = "none";
             MainVisible()
         }
     }
-    
-)
 
-  
+    )
+
+
 
 }
 
 function textMundaAnimation() {
-    var NewTimeline=gsap.timeline()
-    let breakStatement=document.createElement("br")
-    
-    splitMundanTxt.forEach((element,index) => {
+    var NewTimeline = gsap.timeline()
+    let breakStatement = document.createElement("br")
+
+    splitMundanTxt.forEach((element, index) => {
         let newSpanEle = document.createElement("span")
         newSpanEle.innerHTML = element + " "
         mundanDescp.appendChild(newSpanEle)
@@ -114,42 +114,42 @@ function textMundaAnimation() {
             mundanDescp.appendChild(document.createElement("br"));
         }
 
-    })  
-    
-   
-    hindisplitMundanTxt.forEach((element,index) => {
+    })
+
+
+    hindisplitMundanTxt.forEach((element, index) => {
         let newSpanEle = document.createElement("span")
         newSpanEle.innerHTML = element + " "
         mundanDescp.appendChild(newSpanEle)
         newSpanEle.classList.add("font-bold")
-     
-       
-            if (index === splitMundanTxt.length) {
-                let newDivElement=document.createElement("div")
-                mundanDescp.appendChild(newDivElement);
-                newDivElement.innerHTML="|| धन्यवाद ||"
-                newDivElement.classList.add("NewDivForThanks","font-bold","text-2xl")
-            }
 
-    
-    })  
-   
-    NewTimeline.from("#newmundanDescp span", {
-        opacity: 0, y: 20, stagger: 0.3, duration: 2,    
-        onComplete(){
 
-        }    
-    });
-    NewTimeline.from(".NewDivForThanks",{
-        delay:0,
-        opacity: 0, y: 20, duration: 0.5,  
+        if (index === splitMundanTxt.length) {
+            let newDivElement = document.createElement("div")
+            mundanDescp.appendChild(newDivElement);
+            newDivElement.innerHTML = "|| धन्यवाद ||"
+            newDivElement.classList.add("NewDivForThanks", "font-bold", "text-2xl")
+        }
+
+
     })
-    NewTimeline.from("")
+
+    NewTimeline.from("#newmundanDescp span", {
+        opacity: 0, y: 20, stagger: 0.3, duration: 2,
+        onComplete() {
+
+        }
+    });
+    NewTimeline.from(".NewDivForThanks", {
+        delay: 0,
+        opacity: 0, y: 20, duration: 0.5,
+    })
     NewTimeline.from("#mainContainer #starAnimation1", {
         rotate: 360,
         duration: 1,
         yoyo: true,
         scrollTrigger: ("main", {
+            scroller: "body",
             scrub: 2
         })
     });
@@ -158,6 +158,7 @@ function textMundaAnimation() {
         duration: 1,
         yoyo: true,
         scrollTrigger: ("main", {
+            scroller: "body",
             scrub: 2,
         })
     });
@@ -205,11 +206,11 @@ function textPinAnimation() {
         delay: 1,
         duration: 2,
         opacity: 0,
-        y:100,
+        y: 100,
         scrollTrigger: {
             trigger: "#Parents"
         }
-    
+
     })
 
 
