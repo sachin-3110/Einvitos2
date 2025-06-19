@@ -225,7 +225,7 @@ var Minutes = document.getElementById("minutes");
 var Seconds = document.getElementById("seconds");
 
 function updateCountdown() {
-    const targetDate = new Date("April 14, 2025 08:00:00").getTime();
+    const targetDate = new Date("June 23, 2025 08:00:00").getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 
